@@ -24,11 +24,14 @@ class GildedRoseTest {
     @Test
     void qualityShouldDegradeTwiceAsFastWhenConjured() {
         Item conjuredItem3daysTogo = new Item("Conjured Mana Cake", 3, 6);
+        Item conjuredItem0daysTogo = new Item("Conjured Mana Cake", 0, 6);
         // process
-        processItems(conjuredItem3daysTogo);
+        processItems(conjuredItem3daysTogo, conjuredItem0daysTogo);
 
         // should decrease double
         assertEquals(4, conjuredItem3daysTogo.quality);
+        // should decrease 2x double
+        assertEquals(2, conjuredItem0daysTogo.quality);
 
     }
 
