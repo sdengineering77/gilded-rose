@@ -63,7 +63,7 @@ class GildedRoseTest {
     void qualityShouldBeBoxed() {
         Item fooItem1daysTogo = new Item("Foo", 1, 0);
         Item agedBrie0daysTogo = new Item("Aged Brie", 0, 49); // edge case, increases by 2
-        Item agedBrie1daysTogo = new Item("Aged Brie", 0, 49);
+        Item agedBrie1daysTogo = new Item("Aged Brie", 1, 49);
         // process
         processItems(fooItem1daysTogo, agedBrie0daysTogo, agedBrie1daysTogo);
 
